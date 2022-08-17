@@ -1,0 +1,31 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+div.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+div.header{
+    height: 80px;
+    width: 100%;
+    background-color: aqua;
+}
+
+div.calculator {
+    border: black solid 2px;
+    height: 500px;
+    width: 400px;  
+}
+
+div.footer{
+    height: 50px;
+    width:100%;
+    background-color: aqua;
+}
