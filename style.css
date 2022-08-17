@@ -35,9 +35,7 @@ body {
     border: black solid 2px;
     height: 500px;
     width: 400px;  
- 
-    
-    
+
 }
 
 .screen {
@@ -53,13 +51,18 @@ body {
 
 .buttonGrid{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     border: solid black 1px;
     margin:10px;
     height: 348px;
     align-items: center;
     justify-content: center;
-
+}
+/* am incercat sa leg cell-urile din script aici */
+.cell {
+    box-sizing: border-box;
+    border: 1px solid black;
+    transition: background-color .5s;
 }
 
 .footer{
