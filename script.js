@@ -6,6 +6,7 @@ function createGrid(dimension) {
         cell.classList.add('cell');
         cell.style.width = `calc(100% / ${dimension})`;
         cell.style.height = `calc(100% / ${dimension})`;
+
         /*cell.addEventListener('click', () => {
         cell.style.backgroundColor =  'grey' ; 
         })*/
@@ -14,3 +15,10 @@ function createGrid(dimension) {
     }
 }
 createGrid(4);
+
+// functii pentru mai tarziu
+
+const add = (a , b) => a + b;
+const subtract = (a, b) => a = b;
+const multiply = (a, b) => a * b;
+const divide = (a, b) => a / b;
