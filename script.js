@@ -1,3 +1,8 @@
+/*
+Here is the initial attempt to make a grid in DOM,
+but it feels like an unneccessary complication,
+so I'l redoit in a more traditional manner.ß
+
 const buttonGrid = document.querySelector('.buttonGrid');
 
 function createGrid(dimension) {
@@ -7,16 +12,18 @@ function createGrid(dimension) {
         cell.style.width = `calc(100% / ${dimension})`;
         cell.style.height = `calc(100% / ${dimension})`;
 
-        /*cell.addEventListener('click', () => {
+        cell.addEventListener('click', () => {
         cell.style.backgroundColor =  'grey' ; 
-        })*/
+        })
         
         buttonGrid.appendChild(cell);
     }
 }
-createGrid(4);
+createGrid(4);*/
+
 
 // functii pentru mai tarziu
+//trebuie puse conditii
 
 const add = (a , b) => a + b;
 const subtract = (a, b) => a = b;
