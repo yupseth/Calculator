@@ -51,20 +51,33 @@ body {
 }
 
 .buttonGrid{
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap;
     margin:10px;
     height: 348px;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+ 
+}
+
+.bigBtn{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.smallBtn{
+    display: flex;
+    flex-direction: row;
 }
 /* The styling of JS cells 
 .cell {
     box-sizing: border-box;
     border: 1px solid black;
-    border-radius: 30px;
-    
-    
+    border-radius: 30px;   
 }
 */
 
