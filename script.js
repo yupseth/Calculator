@@ -28,7 +28,9 @@ createGrid(4);*/
 const add = (a , b) => a + b;
 const subtract = (a, b) => a - b;
 const multiply = (a, b) => a * b;
-const divide = (a, b) => a / b;
+const divide = (a, b) => b === 0 ? "ce-ai facut veric? ai distrus planeta" : a/b ;
+console.log(divide(9,3));
+
 
 //incomplet
 function operate(operator, a, b) {
