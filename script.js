@@ -21,15 +21,14 @@ function createGrid(dimension) {
 }
 createGrid(4);*/
 
-
-// functii pentru mai tarziu
-//trebuie puse conditii
+const calculatorScreen = document.querySelector('.calculator-screen');
+const numberButtons = document.querySelectorAll('.num');
 
 const add = (a , b) => a + b;
 const subtract = (a, b) => a - b;
 const multiply = (a, b) => a * b;
 const divide = (a, b) => b === 0 ? "ce-ai facut veric? ai distrus planeta" : a/b ;
-console.log(divide(9,3));
+
 
 
 //incomplet
@@ -48,3 +47,17 @@ function operate(operator, a, b) {
 
     }
 }
+/*Create the functions that populate the display 
+when you click the number buttons. 
+You should be storing the ‘display value’ in a variable
+ somewhere for use in the next step.*/
+
+ function display(e){
+    const val = e.target.value;
+    console.log(val);
+    calculatorScreen.value += val;
+ }
+
+ numberButtons.forEach(btn => {
+    btn.addEventListener('click', display);
+});
