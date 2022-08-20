@@ -23,6 +23,13 @@ createGrid(4);*/
 
 const calculatorScreen = document.querySelector('.calculator-screen');
 const numberButtons = document.querySelectorAll('.num');
+const operators = document.querySelectorAll(".operator");
+const equals = document.querySelector(".equal-sign");
+
+let firstNum = 0;
+let secondNum = 0;
+let savedOperator;
+let displayVal = 0;
 
 const add = (a , b) => a + b;
 const subtract = (a, b) => a - b;
@@ -47,17 +54,34 @@ function operate(operator, a, b) {
 
     }
 }
-/*Create the functions that populate the display 
-when you click the number buttons. 
-You should be storing the ‘display value’ in a variable
- somewhere for use in the next step.*/
-
- function display(e){
+ //adauga oprire
+ function handleDigits (e){
+    if(savedOperator) {
+        calculatorScreen.value = "";
+    }
     const val = e.target.value;
-    console.log(val);
     calculatorScreen.value += val;
+    displayVal = Number(calculatorScreen.value);
+
  }
 
+
  numberButtons.forEach(btn => {
-    btn.addEventListener('click', display);
+    btn.addEventListener('click', handleDigits);
+});
+
+operators.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const val = e.target.value;
+        firstNum = displayVal;
+        calculatorScreen.value = val;
+        savedOperator = val;
+        displayVal = null;
+    } );
+});
+
+equals.addEventListener('click', (e) => {
+    secondNum = displayVal;
+    const solution = operate(savedOperator, firstNum, secondNum);
+    calculatorScreen.value = solution;
 });
